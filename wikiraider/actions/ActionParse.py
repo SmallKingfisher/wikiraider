@@ -92,9 +92,9 @@ class ActionParse:
         for xml_file in xml_files:
             for event, element in xml.etree.cElementTree.iterparse(open(xml_file, 'r', encoding='utf-8', errors='ignore')):
                 if element.tag.endswith('page'):
-                    title = element.find('.//{http://www.mediawiki.org/xml/export-0.10/}title')
-                    revision = element.find('.//{http://www.mediawiki.org/xml/export-0.10/}revision')
-                    text = revision.find('.//{http://www.mediawiki.org/xml/export-0.10/}text')
+                    title = element.find('.//{http://www.mediawiki.org/xml/export-0.11/}title')
+                    revision = element.find('.//{http://www.mediawiki.org/xml/export-0.11/}revision')
+                    text = revision.find('.//{http://www.mediawiki.org/xml/export-0.11/}text')
 
                     element.clear()
 
